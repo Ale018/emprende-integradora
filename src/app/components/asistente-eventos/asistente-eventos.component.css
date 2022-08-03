@@ -1,0 +1,15 @@
+body{
+    margin-top: 3%;
+    margin-left: 5%;
+    position:absolute; 
+    top:0; 
+    left:0;
+    width: 90%;
+}
+#titulo{
+    text-align: center;
+}
+#eventos{
+    width: 70%;
+    margin-left: 20%;
+}

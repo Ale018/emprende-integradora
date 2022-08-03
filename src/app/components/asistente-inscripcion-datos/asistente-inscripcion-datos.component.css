@@ -1,0 +1,37 @@
+body{
+    margin-top: 3%;
+    margin-left: 25%;
+    position:absolute; 
+    top:0; 
+    left:0;
+    width: 70%;
+    
+}
+#botones{
+    width: 100%;
+}
+#textModal{
+    text-align: center;
+}
+#botoncerrar{
+    margin-right: 42%;
+}
+
+#check{
+    margin-left: 32%;
+}
+#paginacion{
+    background-color: #243A73 ;
+    width: 100%;
+    display: flex;
+    justify-content: center
+}
+#boton{
+    margin-top: 5%;
+    margin-bottom: -2%;
+}
+#titulo{
+    text-align: center;
+}
+
+

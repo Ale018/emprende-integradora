@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RegistroAsistenciaService } from './services/registro-asistencia.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +15,14 @@ import { PiePaginaComponent } from './components/pie-pagina/pie-pagina.component
 import { RegistroComponent } from './components/registro/registro.component';
 import { LateralComponent } from './components/lateral/lateral.component';
 import { EmprendeComponent } from './components/emprende/emprende.component';
+import { AsistenteConvocatoriaComponent } from './components/asistente-convocatoria/asistente-convocatoria.component';
+import { AsistenteEventosComponent } from './components/asistente-eventos/asistente-eventos.component';
+import { AsistenteInscripcionComponent } from './components/asistente-inscripcion/asistente-inscripcion.component';
+import { AsistenteInscripcionDatosComponent } from './components/asistente-inscripcion-datos/asistente-inscripcion-datos.component';
+import { LateralAdministradorComponent } from './components/lateral-administrador/lateral-administrador.component';
+import { LateralAsistenteComponent } from './components/lateral-asistente/lateral-asistente.component';
+import { LateralEvaluadorComponent } from './components/lateral-evaluador/lateral-evaluador.component';
+import { LateralParticipanteComponent } from './components/lateral-participante/lateral-participante.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +35,25 @@ import { EmprendeComponent } from './components/emprende/emprende.component';
     PiePaginaComponent,
     RegistroComponent,
     LateralComponent,
-    EmprendeComponent
+    EmprendeComponent,
+    AsistenteConvocatoriaComponent,
+    AsistenteEventosComponent,
+    AsistenteInscripcionComponent,
+    AsistenteInscripcionDatosComponent,
+    LateralAdministradorComponent,
+    LateralAsistenteComponent,
+    LateralEvaluadorComponent,
+    LateralParticipanteComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    RegistroAsistenciaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

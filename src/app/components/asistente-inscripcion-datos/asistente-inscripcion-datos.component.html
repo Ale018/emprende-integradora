@@ -1,0 +1,112 @@
+
+<div id="cuerpo"><br>
+    <h1 id="titulo" text-aling="center" class="h3 mb-4 text-gray-800">Inscripción</h1>
+    <hr>
+  
+    <div class="card shadow mb-4">
+      <nav id="paginacion" aria-label="Page navigation example">
+        <ul class="pagination">
+          <li id="boton" class="page-item"><a class="page-link" href="/inscripcion">Eventos</a></li>
+          <li id="boton" class="page-item"><a class="page-link" href="/inscripcionDatos">Datos Personales</a></li>
+        </ul>
+      </nav>
+      <form id="form" class="form">
+        <!-------------------------------------------Datos Personales------------------------------------------>
+        <div class="mb-3 mt-3">
+          <label for="uname" class="form-label">Nombre(s):</label>
+          <input type="text" class="form-control" id="uname" placeholder="Ingresa tu nombre(s)" name="uname" required>
+          <label for="uname" class="form-label">Apellido Paterno:</label>
+          <input type="text" class="form-control" id="uname" placeholder="Ingresa tu apellido paterno)" name="uname"
+            required>
+          <label for="uname" class="form-label">Apellido Materno:</label>
+          <input type="text" class="form-control" id="uname" placeholder="Ingresa tu apellido materno" name="uname"
+            required>
+          <div class="valid-feedback">Valido</div>
+          <div class="invalid-feedback">Llena este campo</div>
+        </div>
+  
+        <div class="mb-3 mt-3">
+          <label for="email" class="form-label">Correo Electronico:</label>
+          <input type="text" class="form-control" id="email" placeholder="Ingresa un correo electronico" name="email"
+            required>
+          <div class="valid-feedback">Valido</div>
+          <div class="invalid-feedback">Llena este campo</div>
+        </div>
+  
+        <div class="mb-3 mt-3">
+          <label for="email" class="form-label">Campus:</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected></option>
+            <option value="1">Campus "Dolores Hidalgo"</option>
+            <option value="0">Campus "Victoria"</option>
+          </select>
+        </div>
+  
+        <div class="mb-3 mt-3">
+          <label for="email" class="form-label">Programa Educativo:</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected></option>
+            <option value="1">Escolarizado</option>
+            <option value="0">Semiescolarizado</option>
+          </select>
+        </div>
+  
+        <div class="mb-3 mt-3">
+          <label for="uname" class="form-label">Clave del grupo:</label>
+          <input type="text" class="form-control" id="uname" placeholder="Ingresa la clave del grupo" name="uname"
+            required>
+          <div class="valid-feedback">Valido</div>
+          <div class="invalid-feedback">Llena este campo</div>
+        </div>
+  
+        <div class="mb-3 mt-3">
+          <label for="uname" class="form-label">Clave de la carrera:</label>
+          <input type="text" class="form-control" id="uname" placeholder="Ingresa la clave de la carrera" name="uname"
+            required>
+          <div class="valid-feedback">Valido</div>
+          <div class="invalid-feedback">Llena este campo</div>
+        </div>
+  
+        <div class="mb-3 mt-3">
+          <label for="uname" class="form-label">Numero de Telefono:</label>
+          <input type="text" class="form-control" id="uname" placeholder="Ingresa tu numero de telefono" name="uname"
+            required>
+          <div class="valid-feedback">Valido</div>
+          <div class="invalid-feedback">Llena este campo</div>
+        </div>
+
+        <div id="botones" class="btn-group" role="group" aria-label="Basic radio toggle button group">
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+          <a href="/asistente" class="btn btn-primary" for="btnradio2"><span>Codigo QR</span></a>
+      </div><br><br>
+
+        <div id="botones" class="btn-group" role="group" aria-label="Basic radio toggle button group">
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+          <a class="btn btn-primary" for="btnradio2" data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"><span>Aceptar</span></a>
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+          <a href="/convocatoria" class="btn btn-outline-warning" for="btnradio2"><span>Cancelar</span></a>
+        </div>
+
+        <!-- Button trigger modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p id="textModal">Tu registro se a creado exitosamente.<br>
+                  <hr><br>Se a enviado tu código de acceso a través de tu correo electrónico.
+              </div>
+              <div class="modal-footer">
+                <a href="/inscripcion" id="botoncerrar" type="button" class="btn btn-secondary" >Cerrar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div><br><br>
+  </div>

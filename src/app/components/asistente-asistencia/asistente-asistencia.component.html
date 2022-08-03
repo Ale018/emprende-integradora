@@ -1,0 +1,56 @@
+<body><br>
+    <div class="container-fluid" id="cuerpo">
+      <h1 id="titulo" text-aling="center" class="h3 mb-4 text-gray-800">Registra tu asistencia</h1>
+      <hr>
+    <br>
+    <div class="card shadow mb-4">
+      <form >
+        <div class="mb-3 mt-3">
+          <label for="Id_Actividad" class="form-label">Clave del registro de participante:</label>
+          <div class="card-header ">
+          {{RegistroAsistenciaActividad.Id_RegistroAsistente}}
+          </div>
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="Id_RegistroAsistente" class="form-label">Clave de la actividad:</label>
+          <div class="card-header">
+            {{RegistroAsistenciaActividad.Id_Actividad}}
+          </div>
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="" class="form-label">Asistio al evento</label>
+          <select class="form-select" aria-label="Default select example" name="Estatus_Asistencia">
+          <option selected></option>
+          <option value="1">Si</option>
+          <option value="0">No</option>
+        </select>
+        </div>
+        <!-- Button trigger modal --><br>
+        <p id="centrado">
+          <button type="button" (click)="saveNewAsistencia()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Aceptar
+    </button>
+        </p>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Mensaje</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Descargar Constancia</button>
+          </div>
+        </div>
+      </div>
+    </div>
+      </form><br>
+    </div>
+    </div><br><br><br><br><br><br><br><br><br>
+  </body>
