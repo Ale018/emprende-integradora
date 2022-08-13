@@ -15,6 +15,8 @@ import { AsistenteInscripcionDatosComponent } from './components/asistente-inscr
 import { AsistenteEventosComponent } from './components/asistente-eventos/asistente-eventos.component';
 import { AsistenteConvocatoriaComponent } from './components/asistente-convocatoria/asistente-convocatoria.component';
 import { AsistenteCroquisComponent  } from './components/asistente-croquis/asistente-croquis.component';
+import { LateralComponent } from './components/lateral/lateral.component';
+import { CodigoQRComponent } from './components/codigo-qr/codigo-qr.component';
 
 
 const routes: Routes = [
@@ -36,7 +38,9 @@ const routes: Routes = [
   {
     path: 'RegistroAsistenciaActividad/add',
     component: AsistenteAsistenciaComponent
-  }
+  },
+  {path: 'lateral', component: LateralComponent},
+  {path: 'codigo', component: CodigoQRComponent}
  // {path: 'emprende', component:EmprendeComponent}
 ];
 

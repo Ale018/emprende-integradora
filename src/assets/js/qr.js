@@ -7,3 +7,4 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 	QR.makeCode(formulario.link.value);
 });
+ 

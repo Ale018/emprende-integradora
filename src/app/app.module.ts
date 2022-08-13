@@ -1,9 +1,9 @@
+import { RegistroAsistenteService } from './services/registro-asistente.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RegistroAsistenciaService } from './services/registro-asistencia.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdministradorComponent } from './components/administrador/administrador.component';
@@ -23,6 +23,8 @@ import { LateralAdministradorComponent } from './components/lateral-administrado
 import { LateralAsistenteComponent } from './components/lateral-asistente/lateral-asistente.component';
 import { LateralEvaluadorComponent } from './components/lateral-evaluador/lateral-evaluador.component';
 import { LateralParticipanteComponent } from './components/lateral-participante/lateral-participante.component';
+import { AsistenteAsistenciaComponent } from './components/asistente-asistencia/asistente-asistencia.component';
+import { AsistenteEvaluarComponent } from './components/asistente-evaluar/asistente-evaluar.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { LateralParticipanteComponent } from './components/lateral-participante/
     LateralAdministradorComponent,
     LateralAsistenteComponent,
     LateralEvaluadorComponent,
-    LateralParticipanteComponent
+    LateralParticipanteComponent,
+    AsistenteAsistenciaComponent,
+    AsistenteEvaluarComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +56,8 @@ import { LateralParticipanteComponent } from './components/lateral-participante/
     FormsModule
   ],
   providers: [
-    RegistroAsistenciaService
+    RegistroAsistenciaService,
+    RegistroAsistenteService
   ],
   bootstrap: [AppComponent]
 })

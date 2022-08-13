@@ -1,6 +1,7 @@
+import { RegistroComponent } from './../registro/registro.component';
 import { RegistroAsistenciaService } from './../../services/registro-asistencia.service';
 import { Component, OnInit, HostBinding } from '@angular/core';
-import { ActivatedRoute,Route } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { RegistroAsistenciaActividad } from 'src/app/models/RegistroAsistenciaActividad';
 import {Router} from  '@angular/router';
 
@@ -13,13 +14,25 @@ export class AsistenteAsistenciaComponent implements OnInit {
   @HostBinding('class') classes = 'row'; 
 
   RegistroAsistenciaActividad: RegistroAsistenciaActividad={
-    Id_RegistroAsistente: 0,
-    Id_Actividad: 0,
+    Id_RegistroAsistente: '',
+    Id_Actividad: '',
     Estatus_Asistencia: '' 
   }
-  constructor(private registroAsistenciaService : RegistroAsistenciaService, private router:Router,private activedRoute:ActivatedRoute) { }
+  edit:boolean =false;
+  constructor(private registroAsistenciaService : RegistroAsistenciaService, private router:Router,private ActivatedRoute:ActivatedRoute) { }
   ngOnInit(): void {
-    this.saveNewAsistencia();
+    const params=this.ActivatedRoute.snapshot.params;
+    if(params ['Id_RegistroAsistente']){
+      this.registroAsistenciaService.getRegistroAsistencia().subscribe(
+      res =>{
+        console.log(res);
+        this.RegistroAsistenciaActividad=res;
+        this.edit=true;
+
+      },
+      err=>console.error(err)
+      );
+    }
   }
   saveNewAsistencia(){
     this.registroAsistenciaService.saveRegistroAsistencia( this.RegistroAsistenciaActividad).subscribe(
@@ -31,7 +44,8 @@ export class AsistenteAsistenciaComponent implements OnInit {
     );
     console.log(this.RegistroAsistenciaActividad)
   }
-  getGames(){
+  
+  getAsistencia(){
     this.registroAsistenciaService.saveRegistroAsistencia( this.RegistroAsistenciaActividad).subscribe(
       resp=> {
         this.RegistroAsistenciaActividad =resp;

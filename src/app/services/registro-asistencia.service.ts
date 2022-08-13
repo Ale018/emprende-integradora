@@ -8,7 +8,6 @@ import { Observable } from 'rxjs';
 })
 
 export class RegistroAsistenciaService {
-
   API_URI = 'http://localhost:3000/api';
 
   constructor(private http:HttpClient) { }

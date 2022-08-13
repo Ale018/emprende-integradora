@@ -4,19 +4,16 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   </head>
-  
   <div class="container-fluid" id="cuerpo"><br>
     <h1 id="titulo" text-aling="center" class="h3 mb-4 text-gray-800">Evalua el evento</h1>
-    <hr>
-    <br>
+    <hr><br>
     <div class="card shadow mb-4">
       <div class="mb-3 mt-3">
         <label for="nombre" class="form-label">Clave del registro de participante:</label>
-        <input type="text" class="form-control" id="nombre" placeholder="Clave de registro" name="nombre">
+        <input type="text" [(ngModel)]="EvaluacionEvento.Id_RegistroAsistente" class="form-control" id="Id_RegistroAsistente" placeholder="Clave de registro" name="Id_RegistroAsistente">
       </div>
       <br><br>
-  
-      <div  id="estrellas" class="container">
+<!--<div  id="estrellas" class="container">
         <div class="star-widget" >
           <h4>Selecciona una calificación al evento</h4>
           <input type="radio" name="rate" id="rate-5">
@@ -30,11 +27,10 @@
           <input type="radio" name="rate" id="rate-1">
           <label for="rate-1" class="fas fa-star"></label>
         </div>
-      </div>
-      <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Escribe un comentario"></textarea><br>
+      </div>-->
+      <textarea class="form-control" [(ngModel)]="EvaluacionEvento.Comentarios_Evento" rows="5" id="comment" name="Comentarios_Evento" placeholder="Escribe un comentario"></textarea><br>
       <p id="centrado">
-         <button  type="submit" class="btn btn-primary">Enviar</button>
+         <button (click)="saveNewEvaluacionEvento()" onclick="location.href='/convocatoria'" type="submit" class="btn btn-primary">Enviar</button>
       </p>
     </div><br><br>
-   
   </div> 

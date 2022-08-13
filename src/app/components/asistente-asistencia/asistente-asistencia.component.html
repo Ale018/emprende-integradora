@@ -7,28 +7,19 @@
       <form >
         <div class="mb-3 mt-3">
           <label for="Id_Actividad" class="form-label">Clave del registro de participante:</label>
-          <div class="card-header ">
-          {{RegistroAsistenciaActividad.Id_RegistroAsistente}}
-          </div>
+          <input type="text" [(ngModel)]="RegistroAsistenciaActividad.Id_RegistroAsistente" class="form-control" placeholder="Ingresa el id del registro del asistente" name="Id_RegistroAsistente" required>
         </div>
         <div class="mb-3 mt-3">
           <label for="Id_RegistroAsistente" class="form-label">Clave de la actividad:</label>
-          <div class="card-header">
-            {{RegistroAsistenciaActividad.Id_Actividad}}
-          </div>
+          <input type="text" [(ngModel)]="RegistroAsistenciaActividad.Id_Actividad" class="form-control" placeholder="Ingresa el id de la actividad" name="Id_Actividad" required>
         </div>
         <div class="mb-3 mt-3">
           <label for="" class="form-label">Asistio al evento</label>
-          <select class="form-select" aria-label="Default select example" name="Estatus_Asistencia">
-          <option selected></option>
-          <option value="1">Si</option>
-          <option value="0">No</option>
-        </select>
+          <input type="text" [(ngModel)]="RegistroAsistenciaActividad.Estatus_Asistencia" class="form-control" placeholder="1=Si o 0=No" name="Estatus_Asistencia" required>
         </div>
         <!-- Button trigger modal --><br>
         <p id="centrado">
-          <button type="button" (click)="saveNewAsistencia()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-      Aceptar
+          <button type="button" (click)="saveNewAsistencia()" onclick="location.href='/convocatoria'" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Aceptar
     </button>
         </p>
     
@@ -44,12 +35,15 @@
             ...
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary">Descargar Constancia</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="location.href='/convocatoria'">Cerrar</button>
+            <button type="button" class="btn btn-primary" onclick="location.href='/convocatoria'">Descargar Constancia</button>
           </div>
         </div>
       </div>
     </div>
+
+
+    
       </form><br>
     </div>
     </div><br><br><br><br><br><br><br><br><br>
