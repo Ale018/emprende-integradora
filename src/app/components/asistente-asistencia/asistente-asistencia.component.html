@@ -6,7 +6,7 @@
     <div class="card shadow mb-4">
       <form >
         <div class="mb-3 mt-3">
-          <label for="Id_Actividad" class="form-label">Clave del registro de participante:</label>
+          <label for="Id_Actividad" class="form-label">Clave del registro de asistente:</label>
           <input type="text" [(ngModel)]="RegistroAsistenciaActividad.Id_RegistroAsistente" class="form-control" placeholder="Ingresa el id del registro del asistente" name="Id_RegistroAsistente" required>
         </div>
         <div class="mb-3 mt-3">
@@ -22,7 +22,6 @@
           <button type="button" (click)="saveNewAsistencia()" onclick="location.href='/convocatoria'" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Aceptar
     </button>
         </p>
-    
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">

@@ -32,24 +32,14 @@
   
         <div class="mb-3 mt-3">
           <label for="email" class="form-label">Campus:</label>
-          <input type="text" [(ngModel)]="RegistroAsistente.Campus_Asistente" class="form-control" id="uname" placeholder="Ingresa la clave del grupo" name="uname"
+          <input type="text" [(ngModel)]="RegistroAsistente.Campus_Asistente" class="form-control" id="uname" placeholder="1=Campus Dolores Hidalgo , 0= Campus Victoria" name="uname"
             required>
-          <select class="form-select" aria-label="Default select example">
-            <option selected></option>
-            <option value="1" >Campus "Dolores Hidalgo"</option>
-            <option value="0" >Campus "Victoria"</option>
-          </select>
         </div>
   
         <div class="mb-3 mt-3">
           <label for="email" class="form-label">Programa Educativo:</label>
-          <input type="text" [(ngModel)]="RegistroAsistente.Programa_Educativo" class="form-control" id="uname" placeholder="Ingresa la clave del grupo" name="uname"
+          <input type="text" [(ngModel)]="RegistroAsistente.Programa_Educativo" class="form-control" id="uname" placeholder="1=Escolarizado , 0= Semiescolarizado" name="uname"
             required>
-          <select class="form-select" aria-label="Default select example">
-            <option selected></option>
-            <option value="1">Escolarizado</option>
-            <option value="0">Semiescolarizado</option>
-          </select>
         </div>
   
         <div class="mb-3 mt-3">
@@ -59,7 +49,6 @@
           <div class="valid-feedback">Valido</div>
           <div class="invalid-feedback">Llena este campo</div>
         </div>
-  
         <div class="mb-3 mt-3">
           <label for="uname" class="form-label">Clave de la carrera:</label>
           <input type="text" [(ngModel)]="RegistroAsistente.Id_Carrera" class="form-control" id="uname" placeholder="Ingresa la clave de la carrera" name="uname"
@@ -77,7 +66,7 @@
         </div>
 
         <div class="mb-3 mt-3">
-          <label for="uname" class="form-label">QR:</label>
+          <label for="uname" class="form-label">Codigo Acceso:</label>
           <input type="text" [(ngModel)]="RegistroAsistente.Codigo_Acceso" class="form-control" id="uname" placeholder="Ingresa tu codigo de acceso" name="uname"
             required>
           <div class="valid-feedback">Valido</div>
@@ -85,12 +74,7 @@
         </div>
 
 
-      <p id="centrado">
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-        <a href="/asistente" class="btn btn-primary" for="btnradio2"><span>Codigo QR</span></a>
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-
-      </p><br>
+      
 
         <p id="centrado">
           <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
@@ -99,6 +83,13 @@
           <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
           <button class="btn btn-outline-warning" for="btnradio2" onclick="location.href='/convocatoria'">Cancelar</button>
         </p>
+
+        <p id="centrado">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+        <a href="/asistente" class="btn btn-primary" for="btnradio2"><span>Codigo QR</span></a>
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+
+      </p><br>
 
         <!-- Button trigger modal -->
 
